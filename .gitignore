@@ -383,6 +383,11 @@ app/backend/lib
 app/backend/lib64
 app/backend/shared_code
 
+# Demo log artifacts
+app/backend/webapp-logs-final/
+app/backend/webapp-logs-final.zip
+app/backend.zip
+
 packages-microsoft*
 
 # docker container build artifacts
