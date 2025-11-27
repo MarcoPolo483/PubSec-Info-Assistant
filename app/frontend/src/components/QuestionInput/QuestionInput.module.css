@@ -59,7 +59,7 @@
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     background: rgb(125,125,125);
-    padding-left: -12px;
+    padding: 0;
     justify-content: center;
     align-items: center;
 }
