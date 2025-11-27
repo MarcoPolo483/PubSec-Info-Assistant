@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.icon {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dropdown {
+    min-width: 100px;
+}
+
+.dropdown :global(.ms-Dropdown-title) {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.dropdown :global(.ms-Dropdown-caretDownWrapper) {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dropdown:hover :global(.ms-Dropdown-title) {
+    background: rgba(255, 255, 255, 0.1);
+}

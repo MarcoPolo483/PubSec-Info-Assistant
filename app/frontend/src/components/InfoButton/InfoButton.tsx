@@ -4,6 +4,7 @@
 import { Text } from "@fluentui/react";
 import { Info24Regular } from "@fluentui/react-icons";
 import styles from "./InfoButton.module.css";
+import { useI18n } from "../../i18n";
 
 interface Props {
     className?: string;
@@ -11,10 +12,17 @@ interface Props {
 }
 
 export const InfoButton = ({ className, onClick }: Props) => {
+    const { t } = useI18n();
+    
     return (
-        <div className={`${styles.container} ${className ?? ""}`} onClick={onClick}>
-            <Info24Regular />
-            <Text>{"Info"}</Text>
-        </div>
+        <button
+            type="button"
+            className={`${styles.container} ${className ?? ""}`}
+            onClick={onClick}
+            aria-label={t("chat.info")}
+        >
+            <Info24Regular aria-hidden="true" />
+            <Text>{t("chat.info")}</Text>
+        </button>
     );
 };
