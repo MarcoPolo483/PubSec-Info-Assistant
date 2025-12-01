@@ -206,9 +206,8 @@ resource "azurerm_monitor_diagnostic_setting" "diagnostic_logs_commercial" {
     category = "AppServiceAuthenticationLogs"
   }
 
-  metric {
+  enabled_metric {
     category = "AllMetrics"
-    enabled  = true
   }
 }
 
@@ -222,9 +221,8 @@ resource "azurerm_monitor_diagnostic_setting" "diagnostic_logs_usgov" {
     category = "FunctionAppLogs"
   }
 
-  metric {
+  enabled_metric {
     category = "AllMetrics"
-    enabled  = true
   }
 }
 

@@ -44,13 +44,11 @@ resource "azurerm_monitor_diagnostic_setting" "diagnostic_logs" {
   name                       = azurerm_storage_account.storage.name
   target_resource_id         = azurerm_storage_account.storage.id
   log_analytics_workspace_id = var.logAnalyticsWorkspaceResourceId
-  metric {
+  enabled_metric {
     category = "Capacity"
-    enabled  = true
   }
-  metric {
+  enabled_metric {
     category = "Transaction"
-    enabled  = true
   }
 }
 
@@ -67,13 +65,11 @@ resource "azurerm_monitor_diagnostic_setting" "blob_diagnostic_logs" {
   enabled_log {
     category = "StorageDelete"
   }
-  metric {
+  enabled_metric {
     category = "Capacity"
-    enabled  = true
   }
-  metric {
+  enabled_metric {
     category = "Transaction"
-    enabled  = true
   }
 }
 
@@ -90,9 +86,8 @@ resource "azurerm_monitor_diagnostic_setting" "file_diagnostic_logs" {
   enabled_log {
     category = "StorageDelete"
   }
-  metric {
+  enabled_metric {
     category = "Transaction"
-    enabled  = true
   }
 }
 
@@ -109,9 +104,8 @@ resource "azurerm_monitor_diagnostic_setting" "queue_diagnostic_logs" {
   enabled_log {
     category = "StorageDelete"
   }
-  metric {
+  enabled_metric {
     category = "Transaction"
-    enabled  = true
   }
 }
 
@@ -128,9 +122,8 @@ resource "azurerm_monitor_diagnostic_setting" "table_diagnostic_logs" {
   enabled_log {
     category = "StorageDelete"
   }
-  metric {
+  enabled_metric {
     category = "Transaction"
-    enabled  = true
   }
 }
 

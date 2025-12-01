@@ -1,0 +1,10 @@
+
+Warning: Argument is deprecated
+
+  with module.application_gateway.azurerm_monitor_diagnostic_setting.appgw,
+  on modules\application-gateway\main.tf line 149, in resource "azurerm_monitor_diagnostic_setting" "appgw":
+ 149: resource "azurerm_monitor_diagnostic_setting" "appgw" {
+
+`metric` has been deprecated in favor of the `enabled_metric` property and will be removed
+in v5.0 of the AzureRM provider
+
