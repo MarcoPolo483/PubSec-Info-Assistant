@@ -1,3 +1,3 @@
 # PubSec-Info-Assistant
 
-Initial scaffold for EVA 2.0 module.
+Initial scaffold for EVA module: PubSec-Info-Assistant.
