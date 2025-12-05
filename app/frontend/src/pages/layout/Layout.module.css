@@ -101,3 +101,15 @@
     display: flex;
     justify-content: center;
 }
+
+.localeSwitcherContainer {
+    margin-left: auto;
+}
+
+/* Focus visible styles for keyboard navigation */
+[data-focus-visible] a:focus,
+[data-focus-visible] button:focus,
+[data-focus-visible] [role="button"]:focus {
+    outline: 2px solid #2491ff;
+    outline-offset: 2px;
+}

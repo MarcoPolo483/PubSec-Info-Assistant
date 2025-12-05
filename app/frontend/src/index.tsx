@@ -14,23 +14,35 @@ import Chat from "./pages/chat/Chat";
 import Content from "./pages/content/Content";
 import Tutor from "./pages/tutor/Tutor";
 import { Tda } from "./pages/tda/Tda";
+import { I18nProvider } from "./i18n";
+import { SkipLink } from "./a11y";
+import { useFocusVisible } from "./a11y";
 
 initializeIcons();
 
+// Component to initialize focus-visible behavior
+function FocusVisibleInit() {
+    useFocusVisible();
+    return null;
+}
+
 export default function App() {
-    const [toggle, setToggle] = React.useState('Work');
     return (
-        <HashRouter>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Chat />} />
-                    <Route path="content" element={<Content />} />
-                    <Route path="*" element={<NoPage />} />
-                    <Route path="tutor" element={<Tutor />} />
-                    <Route path="tda" element={<Tda folderPath={""} tags={[]} />} />
-            </Route>
-            </Routes>
-        </HashRouter>    
+        <I18nProvider>
+            <FocusVisibleInit />
+            <SkipLink href="#main" />
+            <HashRouter>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Chat />} />
+                        <Route path="content" element={<Content />} />
+                        <Route path="*" element={<NoPage />} />
+                        <Route path="tutor" element={<Tutor />} />
+                        <Route path="tda" element={<Tda folderPath={""} tags={[]} />} />
+                    </Route>
+                </Routes>
+            </HashRouter>
+        </I18nProvider>
     );
 }
 

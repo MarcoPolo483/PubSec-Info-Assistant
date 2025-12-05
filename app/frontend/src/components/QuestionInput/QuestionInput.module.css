@@ -26,10 +26,20 @@
 
 .questionInputSendButton {
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+}
+
+.questionInputSendButton:focus-visible {
+    outline: 2px solid #2491ff;
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .questionInputSendButtonDisabled {
     opacity: 0.4;
+    cursor: not-allowed;
 }
 
 .questionClearButtonsContainer {
@@ -49,7 +59,7 @@
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     background: rgb(125,125,125);
-    padding-left: -12px;
+    padding: 0;
     justify-content: center;
     align-items: center;
 }
@@ -57,4 +67,9 @@
 .questionClearChatButton:hover {
     width: 120px;
     color: lightgrey;
+}
+
+.questionClearChatButton:focus-visible {
+    outline: 2px solid #2491ff;
+    outline-offset: 2px;
 }
